@@ -23,7 +23,7 @@ public class Evento implements Serializable {
     private String artista;
     private String costo;
     private String fecha;
-    private int MaxCap;
+    private int maximo;
     private String lugar;
 
     
@@ -53,15 +53,16 @@ public class Evento implements Serializable {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public int getMaximo() {
+        return maximo;
+    }
+
+    public void setMaximo(int maximo) {
+        this.maximo = maximo;
+    }
     
-    public int getMaxCap() {
-        return MaxCap;
-    }
-
-    public void setMaxCap(int MaxCap) {
-        this.MaxCap = MaxCap;
-    }
-
+ 
     
 
 

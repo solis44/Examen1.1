@@ -2,20 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Eventos Registrados</title>
+          
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="background">
+      
         <h1 th:text="${titulo}"></h1>
         <table>
             <th:block th:each="user : ${evento}">
 
                 <tr>
-                    <td th:text="${user.getId}"></td>
+               
+                    <td th:text="${user.getId}" ></td>
                     <td th:text="${user.getArtista}"></td>
                     <td th:text="${user.getCosto}"></td>
                     <td th:text="${user.getFecha}"></td>
-                    <td th:text="${user.getMaxCap}"></td>
+                    <td th:text="${user.getMaximo}"></td>
                     <td th:text="${user.getLugar}"></td>
 
                     <td>

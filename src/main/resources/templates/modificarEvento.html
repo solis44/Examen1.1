@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>ITeck Agegar Eventos</title>
+              <link rel="stylesheet" href="evento.css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="background">
         <header/>
         <h2>Eventos Guardados</h2>
       
@@ -23,14 +24,14 @@
             <label for="fecha">Fecha:</label>
             <input type="text"th:field="*{fecha}"/>
             <br>
-            <label for="MaxCap">Capacidad Maxima:</label>
-            <input type=""th:field="*{MaxCap}"/>
+            <label for="maximo">Capacidad Maxima:</label>
+            <input type="text"th:field="*{maximo}"/>
             <br>
             <label for="lugar">Lugar</label>
             <input type="text"th:field="*{lugar}"/>
             <br>
            
-            <button type="submit"class="btn btn-primary"value="Guardar">Guardar <button/>
+            <button type="submit"class="btn btn-primary"value="GuardarEvento">Guardar <button/>
         </form>
           <form th:action="@{/verEventos}"
             
