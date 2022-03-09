@@ -18,7 +18,7 @@ public class EventoController {
 
     @Autowired
     private IEventoService eventoService;
-
+  // y se usa este
     @GetMapping("/verEventos")
     public String evento(Model model) {
         List<Evento> listaEventos = eventoService.getEvento();
@@ -26,7 +26,8 @@ public class EventoController {
         model.addAttribute("evento", listaEventos);
         return "evento";
     }
-
+    
+  
     @PostMapping("/guardarEvento")
     public String evento(@ModelAttribute Evento evento) {
         eventoService.saveEvento(evento);
@@ -45,7 +46,7 @@ public class EventoController {
         eventoService.deleteEvento(idEvento);
         return "redirect:/evento";
     }
-
+   //Se usa este
     @GetMapping("/agregarEventosN")
     public String modificarEventos(Model model) {
         model.addAttribute("evento", new Evento());
