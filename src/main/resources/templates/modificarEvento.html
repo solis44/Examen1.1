@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ITeck Agegar Eventos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header/>
+        <h2>Eventos Guardados</h2>
+      
+        <br> 
+        <form th:action="@{/guardarEvento}"
+              method="post"
+              th:object="${evento}">
+              <input type="hidden" name="idEvento" th:field="*{id}"/>
+            <label for="nombre">Artista:</label>
+            <input type="text"th:field="*{artista}"/>
+            <br>
+            <label for="costo">Costo:</label>
+            <input type="text"th:field="*{costo}"/>
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="text"th:field="*{fecha}"/>
+            <br>
+            <label for="MaxCap">Capacidad Maxima:</label>
+            <input type=""th:field="*{MaxCap}"/>
+            <br>
+            <label for="lugar">Lugar</label>
+            <input type="text"th:field="*{lugar}"/>
+            <br>
+           
+            <button type="submit"class="btn btn-primary"value="Guardar">Guardar <button/>
+        </form>
+          <form th:action="@{/verEventos}"
+            
+              th:object="${evento}">
+              <button type="submit"class="btn btn-primary"value="evento">Ver Eventos guardados<button/>
+              
+          </form>
+        <footer/>
+
+    </body>
+</html>
